@@ -33,7 +33,6 @@
 @endsection
 
 @section("isi-dashboard-user")
- <!-- .row -->
  
 <div class="col-sm-12">
     <div class="white-box p-l-20 p-r-20">
@@ -44,80 +43,78 @@
         <div class="row">
             <div class="col-md-12">
 
-                    <div class="form-group m-b-40">
-                        <input type="text" class="form-control" id="input1" required><span class="highlight"></span> <span class="bar"></span>
-                        <label for="input1">Nama</label>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                        <input type="text" class="form-control" id="input2" required><span class="highlight"></span> <span class="bar"></span>
-                        <label for="input2">NIK</label>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                        <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
-                        <label for="input3">Email</label>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                        <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
-                        <label for="input3">No HP</label>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                        <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
-                        <label for="input3">Bagian</label>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                        <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
-                        <label for="input3">Jabatan</label>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                        <textarea class="form-control" id="input3" required></textarea><span class="highlight"></span> <span class="bar"></span>
-                        <label for="input3">Alasan Absensi</label>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                            <div class="input-group">
-                                <p for="datepicker-autoclose-1">Dari tanggal:</p><br>
-                                <input type="text" class="form-control" id="datepicker-autoclose-1" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span><span class="highlight"></span> <span class="bar"></span>
-                            </div>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                            <div class="input-group">
-                                <p for="datepicker-autoclose-2">Sampai tanggal:</p><br>
-                                <input type="text" class="form-control" id="datepicker-autoclose-2" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span><span class="highlight"></span> <span class="bar"></span>
-                            </div>
-                    </div>
-
-                    <div class="form-group m-b-40">
-                        <div class="col-sm-12">
-                            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                    <label>Upload Bukti (jika ada)</label>
-                                    <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span>
-                                    </div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                                    <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a><span class="highlight"></span> <span class="bar"></span>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                   
-               
+                <div class="form-group m-b-40">
+                    <input type="text" class="form-control" id="input1" required><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input1">Nama</label>
                 </div>
+
+                <div class="form-group m-b-40">
+                    <input type="text" class="form-control" id="input2" required><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input2">NIK</label>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3">Email</label>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3">No HP</label>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3">Bagian</label>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3">Jabatan</label>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <textarea class="form-control" id="input3" required></textarea><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3">Alasan Absensi</label>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <p>Dari:</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span> 
+                    </div>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <p>Sampai:</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="datepicker-autoclose2" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span> 
+                    </div>
+                </div>
+
+                <div class="form-group m-b-40">
+                    <p>Bukti:</p>
+                    <div class="col-sm-12">
+                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                            <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span>
+                            </div> 
+                            <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
+                            <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
                 
            
+            <div class="md-12">
+                <button type="submit" class="btn btn-block btn-info waves-effect waves-light" style="background:#ab8ce4">Kirim Permohonan</button>
             </div>
-                <div class="md-12">
-                    <button type="submit" class="btn btn-block btn-info waves-effect waves-light" style="background:#ab8ce4">Kirim Permohonan</button>
-                </div>
         </div>
         </form>
     </div>
 </div>
+
 
 
                
