@@ -11,6 +11,53 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',"AuthController@login");
+
+Route::get('/login', "AuthController@login");
+
+Route::post('/login-proses', "AuthController@bacadatabase");
+
+Route::get('/logout', "AuthController@logout");
+
+
+/*--------------------------------- USER -----------------------------------------------*/
+
+Route::get('/dashboard', "HomeController@dashboard");
+
+Route::get('/data-diri', "HomeController@data_diri");
+
+Route::get('/edit-data-diri', "HomeController@edit_data_diri");
+
+Route::get('/permohonan-absensi', "HomeController@permohonan_absensi");
+
+Route::get('/riwayat-absensi', "HomeController@riwayat_absensi");
+
+/*--------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*------------------------------- ADMIN -------------------------------------------------*/
+
+Route::get('/admin/dashboard', "HomeControllerAdmin@dashboard");
+
+Route::get('/admin/lihat-permohonan-absensi', "HomeControllerAdmin@lihat_permohonan_absensi");
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+
