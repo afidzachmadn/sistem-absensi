@@ -2,7 +2,7 @@
 
 @section ('sidebar-dashboard-user')
 <li class="nav-small-cap m-t-10">--- Pilihan Menu</li>
-                    <li> <a href="/dashboard" class="waves-effect active"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
                     <li> <a href="javascript:void(0)" class="waves-effect"><i class="fa fa-star p-r-10"></i> <span class="hide-menu waves-effect">Absensi<span class="fa arrow"></span></span></a>
                          <ul class="nav nav-second-level">
                             <li class="waves-effect"> <a href="/permohonan-absensi">Permohonan Absensi</a> </li>
@@ -57,23 +57,24 @@
                         </tr>
                     </thead>
                     
-                    <tbody>       
+                    <tbody>
+                         @foreach($cek_absen as $LihatAbsen)       
                         <tr>
-                            <td>Jill Gladys</td>
-                            <td>211233453423</td>
-                            <td>Pengelola Teknologi Informasi</td>
-                            <td>Officer</td>
-                            <td>Saya sedang pergi bertamasya ke paris bersama keluarga</td>
-                            <td><a href=""><button class="btn btn-block btn-success">lihat disini</button></a></td>
-                            <td>11/03/2017</td>
-                            <td>11/04/2017</td>
-                            <td>belum-dikonfirmasi</td>
-                            <td></td>
-
-
-                                               
-                                                
+                       
+                            <td>{{$LihatAbsen -> nama}}</td>
+                            <td>{{$LihatAbsen -> nik}}</td>
+                            <td>{{$LihatAbsen -> bagian}}</td>
+                            <td>{{$LihatAbsen -> jabatan}}</td>
+                            <td>{{$LihatAbsen -> alasan_absen}}</td>
+                            <td>
+                            <a class="image-popup-no-margins" href="{{env('APP_URL')}}/storage/bukti-upload-absen/{{$LihatAbsen -> bukti_upload_absen}}" title=""><img src="{{env('APP_URL')}}/storage/bukti-upload-absen/{{$LihatAbsen -> bukti_upload_absen}}" class="img-responsive"/></a>
+                            </td>
+                            <td>{{$LihatAbsen -> tanggal_mulai_absen}}</td>
+                            <td>{{$LihatAbsen -> tanggal_berakhir_absen}}</td>
+                            <td>{{$LihatAbsen -> status_konfirmasi}}</td>
+                            <td>{{$LihatAbsen -> petugas_konfirmasi}}</td>                                    
                         </tr>
+                        @endforeach
                     </tbody>
                     <thead>
                         <tr>

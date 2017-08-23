@@ -34,7 +34,7 @@
 
 @section("isi-dashboard-user")
  <!-- .row -->
-<div class="row">
+
                     
 
                     <div class="col-md-12">
@@ -42,24 +42,24 @@
                             <h2 class="box-title text-center">Ringkasan absensi anda</h2>
                             <div class="row default-steps">
                                 <div class="col-md-4 column-step">
-                                    <div class="step-number" style="background:#ab8ce4">5</div>
+                                    <div class="step-number" style="background:#ab8ce4">{{$terkonfirmasi}}</div>
                                     <div class="step-title">Dikonfirmasi</div>
                                     <div class="step-info">Jumlah absensi yang dikonfirmasi oleh Petugas</div>
                                 </div>
                                 <div class="col-md-4 column-step active" style="background:#ab8ce4">
-                                    <div class="step-number">6</div>
+                                    <div class="step-number">{{$total}}</div>
                                     <div class="step-title">Total</div>
                                     <div class="step-info">Banyaknya seluruh absensi yang pernah anda lakukan</div>
                                 </div>
                                 <div class="col-md-4 column-step">
-                                    <div class="step-number" style="background:#ab8ce4">1</div>
+                                    <div class="step-number" style="background:#ab8ce4">{{$belum_terkonfirmasi}}</div>
                                     <div class="step-title">Belum Dikonfirmasi</div>
                                     <div class="step-info">Jumlah absensi yang belum dikonfirmasi oleh Petugas</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-</div>       
+  
                 
 
 @endsection

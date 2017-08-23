@@ -8,11 +8,29 @@ use Auth;
 class AuthController extends Controller
 {
     public function login(Request $request) {
-        if($request->session()->get('login')) {
-            return redirect()->action('HomeController@dashboard');
-        } else {
+        $id = $request->session()->get('id');
+        $cek_role = DB::table('users')->where('id',$id)->first();
+        if($cek_role != null){
+
+            $CekRole = $cek_role -> role;
+            if($request->session()->get('login') && $CekRole == 'user') {
+                return redirect()->action('HomeController@dashboard');
+            }
+            
+            elseif($request->session()->get('login') && $CekRole == 'admin'){
+    
+                return redirect()->action('HomeControllerAdmin@dashboard');
+                
+            }
+            
+            else {
+                return view('auth.login');
+            }
+        }
+        else{
             return view('auth.login');
         }
+        
     }
 
 

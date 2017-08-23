@@ -127,13 +127,13 @@
                         <a href="#" class="waves-effect"><img src="{{env('APP_URL')}}/storage/foto/{{Session::get('img_url')}}" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('name')}}<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a href="/data-diri"><i class="fa fa-user"></i>Data Diri</a></li>
+                            <li><a href="/admin/data-diri"><i class="fa fa-user"></i>Data Diri</a></li>
                             <li><a href="{{env('APP_URL')}}/logout"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </li>
                     <!-- yield sidebar -->
 
-                    @yield('sidebar-dashboard-user')
+                    @yield('sidebar-dashboard-admin')
                     <!--
                     
                     @yield('sidebar-iso-user')
@@ -148,7 +148,7 @@
         <div id="page-wrapper">
             <div class="container-fluid">
                 <!-- letakan yield -->
-                @yield('breadcrumb-dashboard-user')
+                @yield('breadcrumb-dashboard-admin')
                 <!--
                 
                 @yield('breadcrumb-iso-user')
@@ -164,29 +164,17 @@
                 
 
                 <!-- contents start here -->
-                    @yield('header-dashboard-user')
+                    @yield('header-dashboard-admin')
                     <!-- FOR THIS SECTION IS ONLY FOR DASHBOARD! -->
                 
 
 
                 <!-- .row -->
                 <div class="row">
-                     @yield('isi-dashboard-user')
-                    <!--
-                    
-                     @yield('isi-iso-user')
-                     @yield('isi-sni-user')
-                     @yield('isi-one-stop-service-user')
-                     @yield('isi-profile-user')
-                     @yield('isi-profile-edit-user')
-                     @yield('isi-lihat-dokumen-iso')
-                     @yield('isi-lihat-dokumen-sni')
-                     @yield('isi-tips-user')
-                     @yield('isi-bukti-pembayaran-iso')
-                     @yield('isi-bukti-pembayaran-sni')
-
                      @yield('isi-dashboard-admin')
-                     @yield('isi-iso-admin') -->
+                    
+                    
+                     
                     
 
 

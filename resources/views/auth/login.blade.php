@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Masuk</button>
+                            <button class="btn btn-default btn-lg btn-block text-uppercase waves-effect waves-light" type="submit" style="background:#ab8ce4;color:white">Masuk</button>
                         </div>
                     </div>
                     

@@ -39,56 +39,58 @@
         <h3 class="box-title m-b-0 text-center">Isi data permohonan absensi</h3>
         </br>
         </br>
-        <form class="floating-labels ">
+        <form class="floating-labels" action="{{url('permohonan-absensi-proses')}}" method="post" enctype="multipart/form-data">
+        {{csrf_field()}}
+
         <div class="row">
             <div class="col-md-12">
 
                 <div class="form-group m-b-40">
-                    <input type="text" class="form-control" id="input1" required><span class="highlight"></span> <span class="bar"></span>
-                    <label for="input1">Nama</label>
+                    <input type="text" class="form-control" id="input1" name="nama" value="{{$data_diri -> nama}}" readonly><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input1"></label>
                 </div>
 
                 <div class="form-group m-b-40">
-                    <input type="text" class="form-control" id="input2" required><span class="highlight"></span> <span class="bar"></span>
-                    <label for="input2">NIK</label>
+                    <input type="text" class="form-control" id="input2" name="nik" value="{{$data_diri -> nik}}" readonly><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input2"></label>
                 </div>
 
                 <div class="form-group m-b-40">
-                    <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
-                    <label for="input3">Email</label>
+                    <input type="text" class="form-control" id="input3" name="email" value="{{$data_diri -> email}}" readonly><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3"></label>
                 </div>
 
                 <div class="form-group m-b-40">
-                    <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
-                    <label for="input3">No HP</label>
+                    <input type="text" class="form-control" id="input3" name="no_hp" value="{{$data_diri -> no_hp}}" readonly><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3"></label>
                 </div>
 
                 <div class="form-group m-b-40">
-                    <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
-                    <label for="input3">Bagian</label>
+                    <input type="text" class="form-control" id="input3" name="bagian" value="{{$data_diri -> bagian}}" readonly><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3"></label>
                 </div>
 
                 <div class="form-group m-b-40">
-                    <input type="text" class="form-control" id="input3" required><span class="highlight"></span> <span class="bar"></span>
-                    <label for="input3">Jabatan</label>
+                    <input type="text" class="form-control" id="input3" name="jabatan" value="{{$data_diri -> jabatan}}" readonly><span class="highlight"></span> <span class="bar"></span>
+                    <label for="input3"></label>
                 </div>
 
                 <div class="form-group m-b-40">
-                    <textarea class="form-control" id="input3" required></textarea><span class="highlight"></span> <span class="bar"></span>
+                    <textarea class="form-control" id="input3" name="alasan_absen" required></textarea><span class="highlight"></span> <span class="bar"></span>
                     <label for="input3">Alasan Absensi</label>
                 </div>
 
                 <div class="form-group m-b-40">
                     <p>Dari:</p>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span> 
+                        <input type="text" class="form-control" id="datepicker-autoclose" placeholder="tahun/bulan/hari" name="dari_tanggal" required> <span class="input-group-addon"><i class="icon-calender"></i></span> 
                     </div>
                 </div>
 
                 <div class="form-group m-b-40">
                     <p>Sampai:</p>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="datepicker-autoclose2" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span> 
+                        <input type="text" class="form-control" id="datepicker-autoclose2" placeholder="tahun/bulan/hari" name="sampai_tanggal" required> <span class="input-group-addon"><i class="icon-calender"></i></span> 
                     </div>
                 </div>
 
@@ -99,7 +101,7 @@
                             <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span>
                             </div> 
                             <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                            <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                            <input type="file" name="bukti_upload_absen"> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                         </div>
                             
                     </div>
@@ -108,7 +110,7 @@
                 
            
             <div class="md-12">
-                <button type="submit" class="btn btn-block btn-info waves-effect waves-light" style="background:#ab8ce4">Kirim Permohonan</button>
+                <button type="submit" class="btn btn-block btn-default waves-effect waves-light" style="background:#ab8ce4;color:white">Kirim Permohonan</button>
             </div>
         </div>
         </form>

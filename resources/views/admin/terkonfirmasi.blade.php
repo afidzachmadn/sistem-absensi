@@ -19,7 +19,7 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">System</a></li>
-                            <li class="active">Daftar Permohonan Absensi</li>
+                            <li class="active">Terkonfirmasi</li>
                         </ol>
                     </div>
                     <!-- /.breadcrumb -->
@@ -30,7 +30,7 @@
 
 <div class="col-sm-12">
     <div class="white-box">
-        <h3 class="box-title text-center">Permohonan absensi yang sedang menunggu konfirmasi anda</h3>
+        <h3 class="box-title text-center">Daftar Absensi yang telah anda konfirmasi</h3>
             </br>
             <div class="table-responsive">
                 <table id="myTable" class="table table-striped">
@@ -50,8 +50,8 @@
                         </tr>
                     </thead>
                     
-                    <tbody>
-                     @foreach($lihat_data as $data)        
+                    <tbody>       
+                        @foreach($lihat_data as $data)        
                         <tr>
                             <td>{{$data -> no}}</td>
                             <td>{{$data -> nama}}</td>
@@ -90,28 +90,23 @@
             </br>
         </div>
         <div class="sm-12">
-            <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="background:#ab8ce4;color:white;">Konfirmasi</button>
+            <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="background:#ab8ce4;color:white;">Batal Konfirmasi</button>
         </div>
         </br>
-        <div class="sm-12">
-            <a href="/admin/terkonfirmasi"><button type="button" class="btn btn-block btn-default " style="background:#be62d2;color:white;">Lihat absensi yang sudah terkonfirmasi</button></a>
-        </div>
     </div>
     
 
 </div>
 
-
-<!-- yang dibawah ini enggak kelihatan -->
-
+<!-- yang bawah ga kelihatan yaw -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title text-center" id="exampleModalLabel1">Konfirmasi Absensi Pegawai</h4> </div>
+                <h4 class="modal-title text-center" id="exampleModalLabel1">Batal Konfirmasi Absensi Pegawai</h4> </div>
                 <div class="modal-body">
-                    <form action="{{url('/admin/konfirmasi-proses')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{url('/admin/batal-konfirmasi-proses')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="recipient-name" class="control-label">Masukan No: </label>
@@ -122,7 +117,7 @@
                             <input type="text" class="form-control" name="nik"></input> 
                         </div>
                         <div class="form-group">
-                            <label for="message-text" class="control-label">Ketik "terkonfirmasi" tanpa tanda petik:</label>
+                            <label for="message-text" class="control-label">Ketik "batal konfirmasi" tanpa tanda petik:</label>
                             <input type="text"class="form-control" name="status_konfirmasi"></input>
                         </div>
                 </div>

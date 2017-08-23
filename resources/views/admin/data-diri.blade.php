@@ -1,21 +1,14 @@
-@extends('layout.master')
+@extends('layout.master-admin')
 
-@section ('sidebar-dashboard-user')
+@section ('sidebar-dashboard-admin')
 <li class="nav-small-cap m-t-10">--- Pilihan Menu</li>
-                    <li> <a href="/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="javascript:void(0)" class="waves-effect"><i class="fa fa-star p-r-10"></i> <span class="hide-menu waves-effect">Absensi<span class="fa arrow"></span></span></a>
-                         <ul class="nav nav-second-level">
-                            <li class="waves-effect"> <a href="/permohonan-absensi">Permohonan Absensi</a> </li>
-                            <li class="waves-effect"> <a href="/riwayat-absensi">Lihat Riwayat Absensi</a> </li>
-                        </ul>
-                    </li>
-                    
-                    <li> <a href="#" class="waves-effect"><i class="fa fa-warning p-r-10"></i> <span class="hide-menu">Aduan</span></a> </li>
-                    <li> <a href="#" class="waves-effect"><i class="fa fa-question-circle p-r-10"></i> <span class="hide-menu">Tips</span></a> </li>
+                    <li> <a href="/admin/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="/admin/lihat-permohonan-absensi" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Lihat Permohonan Absensi</span></a> </li>
+                    <li> <a href="#" class="waves-effect"><i class="fa fa-warning p-r-10"></i> <span class="hide-menu">Lihat Aduan</span></a> </li>
 @endsection
 
                 
-@section ('breadcrumb-dashboard-user')
+@section ('breadcrumb-dashboard-admin')
  <div class="row bg-title" style="padding: 25px 15px 15px">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -32,7 +25,7 @@
                 </div>
 @endsection
 
-@section("isi-dashboard-user")
+@section("isi-dashboard-admin")
  <!-- .row -->
 <div class="col-sm-12">
     <div class="white-box">
@@ -60,7 +53,7 @@
             </div>
         </div>
         <div class="sm-12">
-            <a href="/edit-data-diri"><button class="btn btn-block btn-success">Edit</button></a>
+            <a href="/admin/edit-data-diri"><button class="btn btn-block btn-success">Edit</button></a>
         </div>
     </div>
 </div>

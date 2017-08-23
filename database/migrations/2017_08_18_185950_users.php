@@ -33,6 +33,7 @@ class Users extends Migration
     
 
         Schema::create('data_absensi', function (Blueprint $table) {
+            $table->increments('no');
             $table->integer('id')->nullable();
             $table->string('nama', 100)->nullable();
             $table->string('nik',100)->nullable();

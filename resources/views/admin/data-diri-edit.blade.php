@@ -1,21 +1,14 @@
-@extends('layout.master')
+@extends('layout.master-admin')
 
-@section ('sidebar-dashboard-user')
+@section ('sidebar-dashboard-admin')
 <li class="nav-small-cap m-t-10">--- Pilihan Menu</li>
-                    <li> <a href="/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="javascript:void(0)" class="waves-effect"><i class="fa fa-star p-r-10"></i> <span class="hide-menu waves-effect">Absensi<span class="fa arrow"></span></span></a>
-                         <ul class="nav nav-second-level">
-                            <li class="waves-effect"> <a href="/permohonan-absensi">Permohonan Absensi</a> </li>
-                            <li class="waves-effect"> <a href="/riwayat-absensi">Lihat Riwayat Absensi</a> </li>
-                        </ul>
-                    </li>
-                    
-                    <li> <a href="#" class="waves-effect"><i class="fa fa-warning p-r-10"></i> <span class="hide-menu">Aduan</span></a> </li>
-                    <li> <a href="#" class="waves-effect"><i class="fa fa-question-circle p-r-10"></i> <span class="hide-menu">Tips</span></a> </li>
+                    <li> <a href="/admin/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="/admin/lihat-permohonan-absensi" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Lihat Permohonan Absensi</span></a> </li>
+                    <li> <a href="#" class="waves-effect"><i class="fa fa-warning p-r-10"></i> <span class="hide-menu">Lihat Aduan</span></a> </li>
 @endsection
 
                 
-@section ('breadcrumb-dashboard-user')
+@section ('breadcrumb-dashboard-admin')
  <div class="row bg-title" style="padding: 25px 15px 15px">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -25,22 +18,21 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">System</a></li>
-                            <li class="active">Edit Data Diri</li>
+                            <li class="active">Data Diri</li>
                         </ol>
                     </div>
                     <!-- /.breadcrumb -->
                 </div>
 @endsection
 
-@section("isi-dashboard-user")
- <!-- .row -->
- 
+@section("isi-dashboard-admin")
 <div class="col-sm-12">
     <div class="white-box p-l-20 p-r-20">
         <h3 class="box-title m-b-0 text-center">Edit data diri</h3>
         </br>
         </br>
-        <form class="floating-labels" action="{{url('edit-data-diri-proses')}}" method="post" enctype="multipart/form-data">      {{csrf_field()}}
+        <form class="floating-labels" action="{{url('/admin/edit-data-diri-proses')}}" method="post" enctype="multipart/form-data">      
+        {{csrf_field()}}
 
         <div class="row">
             <div class="col-md-12">
@@ -102,11 +94,5 @@
         </form>
     </div>
 </div>
-
-
-               
-                    
-                    
-                
 
 @endsection
