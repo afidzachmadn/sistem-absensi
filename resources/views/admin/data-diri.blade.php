@@ -2,8 +2,8 @@
 
 @section ('sidebar-dashboard-admin')
 <li class="nav-small-cap m-t-10">--- Pilihan Menu</li>
-                    <li> <a href="/admin/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="/admin/lihat-permohonan-absensi" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Lihat Permohonan Absensi</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/admin/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/admin/lihat-permohonan-absensi" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Lihat Permohonan Absensi</span></a> </li>
                     <li> <a href="#" class="waves-effect"><i class="fa fa-warning p-r-10"></i> <span class="hide-menu">Lihat Aduan</span></a> </li>
 @endsection
 
@@ -29,7 +29,7 @@
  <!-- .row -->
 <div class="col-sm-12">
     <div class="white-box">
-        <div class="user-bg"> <img width="100%" alt="user" src="../plugins/images/large/img1.jpg">
+        <div class="user-bg"> <img width="100%" alt="user" src="{{env('APP_URL')}}/plugins/images/large/img1.jpg">
             <div class="overlay-box">
                 <div class="user-content">
                     <a href="javascript:void(0)"><img src="{{env('APP_URL')}}/storage/foto/{{$data_diri -> img_url}}" class="thumb-lg img-circle" alt="img"></a>
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="sm-12">
-            <a href="/admin/edit-data-diri"><button class="btn btn-block btn-success">Edit</button></a>
+            <a href="{{env('APP_URL')}}/admin/edit-data-diri"><button class="btn btn-block btn-success">Edit</button></a>
         </div>
     </div>
 </div>

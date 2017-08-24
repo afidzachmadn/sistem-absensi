@@ -2,11 +2,11 @@
 
 @section ('sidebar-dashboard-user')
 <li class="nav-small-cap m-t-10">--- Pilihan Menu</li>
-                    <li> <a href="/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
                     <li> <a href="javascript:void(0)" class="waves-effect"><i class="fa fa-star p-r-10"></i> <span class="hide-menu waves-effect">Absensi<span class="fa arrow"></span></span></a>
                          <ul class="nav nav-second-level">
-                            <li class="waves-effect"> <a href="/permohonan-absensi">Permohonan Absensi</a> </li>
-                            <li class="waves-effect"> <a href="/riwayat-absensi">Lihat Riwayat Absensi</a> </li>
+                            <li class="waves-effect"> <a href="{{env('APP_URL')}}/permohonan-absensi">Permohonan Absensi</a> </li>
+                            <li class="waves-effect"> <a href="{{env('APP_URL')}}/riwayat-absensi">Lihat Riwayat Absensi</a> </li>
                         </ul>
                     </li>
                     

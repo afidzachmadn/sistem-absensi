@@ -63,7 +63,7 @@
     <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Popup CSS -->
-    <link href="../plugins/bower_components/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
+    <link href="{{env('APP_URL')}}/plugins/bower_components/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
 
     <!-- animation CSS -->
     <link href="{{env('APP_URL')}}/css/animate.css" rel="stylesheet">
@@ -93,7 +93,7 @@
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
                 <!-- Toggle icon for mobile view --><a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
-                <div class="top-left-part"><a class="logo" href="/dashboard"><b><img src="{{env('APP_URL')}}/plugins/images/header-gambar.png" alt="home" /></b>&nbsp<span class="hidden-xs"><strong>Konoha</strong>systems</span></a></div>
+                <div class="top-left-part"><a class="logo" href="{{env('APP_URL')}}/dashboard"><b><img src="{{env('APP_URL')}}/plugins/images/header-gambar.png" alt="home" /></b>&nbsp<span class="hidden-xs"><strong>Konoha</strong>systems</span></a></div>
                 <!-- /Logo -->
                 <!-- Search input and Toggle icon -->
                 <ul class="nav navbar-top-links navbar-right hidden-xs">
@@ -127,7 +127,7 @@
                         <a href="#" class="waves-effect"><img src="{{env('APP_URL')}}/storage/foto/{{Session::get('img_url')}}" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('name')}}<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a href="/data-diri"><i class="fa fa-user"></i>Data Diri</a></li>
+                            <li><a href="{{env('APP_URL')}}/data-diri"><i class="fa fa-user"></i>Data Diri</a></li>
                             <li><a href="{{env('APP_URL')}}/logout"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </li>
@@ -333,18 +333,18 @@
         });
     </script>
     <!-- Plugin JavaScript -->
-    <script src="../plugins/bower_components/moment/moment.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/moment/moment.js"></script>
     <!-- Clock Plugin JavaScript -->
-    <script src="../plugins/bower_components/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/clockpicker/dist/jquery-clockpicker.min.js"></script>
     <!-- Color Picker Plugin JavaScript -->
-    <script src="../plugins/bower_components/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
-    <script src="../plugins/bower_components/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
-    <script src="../plugins/bower_components/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
     <!-- Date Picker Plugin JavaScript -->
-    <script src="../plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <!-- Date range Plugin JavaScript -->
-    <script src="../plugins/bower_components/timepicker/bootstrap-timepicker.min.js"></script>
-    <script src="../plugins/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script>
         // Clock pickers
         $('#single-input').clockpicker({
@@ -421,8 +421,8 @@
         });
     </script>
     <!-- Magnific popup JavaScript -->
-    <script src="../plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
-    <script src="../plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
 
 
 

@@ -2,8 +2,8 @@
 
 @section ('sidebar-dashboard-admin')
 <li class="nav-small-cap m-t-10">--- Pilihan Menu</li>
-                    <li> <a href="/admin/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="/admin/lihat-permohonan-absensi" class="waves-effect active"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Lihat Permohonan Absensi</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/admin/dashboard" class="waves-effect"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/admin/lihat-permohonan-absensi" class="waves-effect active"><i class="fa fa-tachometer p-r-10"></i> <span class="hide-menu">Lihat Permohonan Absensi</span></a> </li>
                     <li> <a href="#" class="waves-effect"><i class="fa fa-warning p-r-10"></i> <span class="hide-menu">Lihat Aduan</span></a> </li>
 @endsection
 
@@ -94,7 +94,7 @@
         </div>
         </br>
         <div class="sm-12">
-            <a href="/admin/terkonfirmasi"><button type="button" class="btn btn-block btn-default " style="background:#be62d2;color:white;">Lihat absensi yang sudah terkonfirmasi</button></a>
+            <a href="{{env('APP_URL')}}/admin/terkonfirmasi"><button type="button" class="btn btn-block btn-default " style="background:#be62d2;color:white;">Lihat absensi yang sudah terkonfirmasi</button></a>
         </div>
     </div>
     
